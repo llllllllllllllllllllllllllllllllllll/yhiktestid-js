@@ -3,7 +3,7 @@ describe('Address Book', function(){
         var addressBook = new AddressBook();
             thisContact = new Contact();
 
-            addressBook.addContract(thisContact);
+            addressBook.addContact(thisContact);
 
             expect(addressBook.getContact(0)).toBe(thisContact);
     })
