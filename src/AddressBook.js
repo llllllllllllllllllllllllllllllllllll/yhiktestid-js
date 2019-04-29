@@ -8,3 +8,7 @@ AddressBook.prototype.addContact = function(contact){ // aadressiraamatusse kont
 AddressBook.prototype.getContact = function(index){ // kontakti saamine aadressiraamatust indeksi järgi
     return this.contacts[index];
 }
+
+AddressBook.prototype.deleteContact = function(index){ // kontakti kustutamine
+    this.contacts.splice(index, 1);
+}
