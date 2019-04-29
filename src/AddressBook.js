@@ -2,6 +2,17 @@ function AddressBook(){ //aadressiraamatu konstruktor
     this.contacts = [];
 }
 
+AddressBook.prototype.getInitialContacts = function(cb){ // simuleerib algsete kontaktide importimist api teel.
+    var self = this;
+
+    setTimeout(function(){
+        self.initialComplete = true;
+        if(cb){
+            return cb();
+        }
+    },3);
+}
+
 AddressBook.prototype.addContact = function(contact){ // aadressiraamatusse kontakti lisamine
     this.contacts.push(contact);
 };
