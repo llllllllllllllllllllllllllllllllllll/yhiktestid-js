@@ -25,10 +25,19 @@ describe('Address Book', function(){
 });
 
 describe('Async Address Book', function(){
-   it('should grab initial contacts',function(done){ // async funktsiooni test
-       var addressBook = new(AddressBook);
 
+    var addressBook = new(AddressBook);
+
+    beforeEach(function (done) {
+       addressBook.getInitialContacts(function(){
+           //lisab callbacki funkstiooni, mis annab märku, millal async funktsioon on lõpetanud ja testimist saab alustada
+           done();
+       })
+   });
+
+   it('should grab initial contacts',function(done){ // async funktsiooni test
        addressBook.getInitialContacts();
        expect(addressBook.initialComplete).toBe(true);
+       done();
    });
 });

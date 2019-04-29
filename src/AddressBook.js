@@ -11,7 +11,7 @@ AddressBook.prototype.getInitialContacts = function(cb){ // simuleerib algsete k
             return cb();
         }
     },3);
-}
+};
 
 AddressBook.prototype.addContact = function(contact){ // aadressiraamatusse kontakti lisamine
     this.contacts.push(contact);
