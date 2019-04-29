@@ -1,0 +1,3 @@
+function Contact(){ //kontakti konstruktor
+
+}

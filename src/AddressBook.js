@@ -1,3 +1,3 @@
-function AddressBook(){
+function AddressBook(){ //aadressiraamatu konstruktor
 
 }
